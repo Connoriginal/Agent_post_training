@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-post-training"
+version = "0.1.0"
+description = "RLVR (GRPO) and on-policy distillation of Qwen3.5-4B on math, built on verl."
+requires-python = ">=3.12,<3.13"
+# Runtime deps (verl, torch, vllm, math-verify, ...) come from verl's uv.lock via scripts/setup_env.sh.
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

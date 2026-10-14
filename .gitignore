@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- Agent_post_training ----
+# verl source checkout (cloned by scripts/setup_env.sh at a pinned commit)
+third_party/
+# per-machine config (copy from configs/env.example.sh)
+configs/env.sh
+# run artifacts: data, checkpoints, logs (default to $DATA_ROOT outside the repo)
+outputs/
+logs/
+*.parquet
+# local-only: Claude Code guidance and the verl report (kept out of git)
+CLAUDE.md
+report/
